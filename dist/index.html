@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <link rel="stylesheet" href="./gbc-emulator.css">
+</head>
+
+<body>
+    <div id="emulator-container"></div>
+
+    <script type="module">
+        import { Emulator } from "./gbc-emulator.js";
+
+        const container = document.getElementById("emulator-container");
+
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const romParam = urlParams.get("rom");
+        if (romParam) {
+            console.log(`Loading ${romParam}`);
+
+            const emulator = new Emulator(container);
+            emulator.loadGame(romParam).then(loaded => {
+                emulator.startGame();
+                setTimeout(() => {
+                    setTimeout(() => {
+                        // emulator.pauseGame();
+                    }, 1000);
+                }, 1000);
+            })
+        }
+    </script>
+</body>
+
+</html>

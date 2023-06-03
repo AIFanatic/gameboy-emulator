@@ -1,0 +1,17 @@
+{
+  "name": "gbc-ts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "esbuild ./src/index.ts --loader:.png=file --bundle --outfile=./dist/gbc-emulator.js --target=es2020 --format=esm --watch"
+  },
+  "devDependencies": {
+    "esbuild": "^0.17.11"
+  },
+  "dependencies": {
+    "buffer": "^6.0.3",
+    "commander": "^10.0.0",
+    "pngjs": "^7.0.0"
+  }
+}

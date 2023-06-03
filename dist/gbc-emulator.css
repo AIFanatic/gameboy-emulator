@@ -1,0 +1,76 @@
+/* src/ui/ui.css */
+html,
+body {
+  margin: 0;
+  overscroll-behavior: contain;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+.resizer[data-direction=horizontal] {
+  background-color: #cbd5e0;
+  cursor: ew-resize;
+  height: 100%;
+  width: 5px;
+}
+.resizer[data-direction=vertical] {
+  background-color: #cbd5e0;
+  cursor: ns-resize;
+  height: 5px;
+  width: 100%;
+}
+.container__left {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.container__right {
+  flex: 1;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+.container__top {
+  height: 12rem;
+  align-items: center;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+.container__bottom {
+  flex: 1;
+  align-items: center;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+.ab-button {
+  border-style: outset;
+  background-color: #a11b63;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  color: #570f35;
+  font-family: sans-serif;
+}
+.startselect-button {
+  width: 39px;
+  border-radius: 20%;
+  border: none;
+  background-color: transparent;
+  color: #81827d;
+  font-size: 6px;
+}
+.direction-button {
+  width: 29px;
+  height: 28px;
+  background-color: #26282b;
+}
