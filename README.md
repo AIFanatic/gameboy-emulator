@@ -7,7 +7,7 @@ A gameboy emulator based on all the other emulators online.
 <br>
 It has a fancy debugger that allows viewing the "internals" of the gameboy.
 
-[Live link](https://aifanatic.github.io/gameboy-emulator/dist/index.html)
+[Live link](https://aifanatic.github.io/gameboy-emulator/dist/index.html?rom=https://aifanatic.github.io/gameboy-emulator/dist/cpu_instrs.gb)
 
 ## Run
 ```bash
